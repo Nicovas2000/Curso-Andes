@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo Completa - HTML5</title>
+    <meta name="description" content="Una página de ejemplo que demuestra todos los conceptos de HTML5 aprendidos.">
+    <meta name="author" content="Brian">
+    <meta name="keywords" content="html5, semantica, accesibilidad, desarrollo web">
+    <meta property="og:title" content="Página de Ejemplo Completa - HTML5">
+    <meta property="og:description" content="Demostración de estructura, semántica y accesibilidad en HTML5.">
+
+</head>
+
+<body>
+
+    <!-- Encabezado principal del sitio -->
+    <header>
+        <!-- Logo del sitio -->
+        <img src="placeholder.jpg" alt="Logo del sitio" width="60" height="60">
+        <!-- Título principal -->
+        <h1>Mi Sitio Web Semántico</h1>
+        <!-- Sidebar de navegación adicional -->
+        <aside>
+            <h2>Sidebar</h2>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#info">Información Adicional</a></li>
+                    <li><a href="#privacidad">Política de Privacidad</a></li>
+                    <li><a href="#terminos">Términos de Servicio</a></li>
+                    <li><a href="#articulos">Artículos Relacionados</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Navegación principal -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#info">Información Adicional</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección de bienvenida -->
+        <section id="inicio">
+            <h2>Bienvenidos a Nuestra</h2>
+            <!-- Artículo destacado -->
+            <article>
+                <!-- Encabezado del artículo -->
+                <header>
+                    <h3>Entrada del Blog: La Importancia de la Semántica</h3>
+                    <p>Publicado el <time datetime="2025-09-17">17 de septiembre de 2025</time></p>
+                </header>
+                <p>
+                    [cite_start]El uso de etiquetas semánticas hace que el código sea más legible, mantenible y
+                    accesible. [cite: 247, 248]
+                    En este texto, <mark>esta parte es muy importante</mark> para entender el concepto.
+                </p>
+
+                <!-- Imagen ilustrativa con pie de foto -->
+                <figure>
+                    <img src="placeholder.jpg" alt="Diagrama de la estructura semántica de una página HTML5" width="600"
+                        height="400">
+                    <figcaption>Fig. 1: Estructura de una página con etiquetas semánticas.</figcaption>
+                </figure>
+
+                <!-- Detalles expandibles con beneficios -->
+                <details>
+                    <summary>Haz clic para ver más sobre los beneficios</summary>
+                    <ul>
+                        [cite_start]<li><strong>Accesibilidad:</strong> Los lectores de pantalla interpretan mejor el
+                            contenido. [cite: 251]</li>
+                        [cite_start]<li><strong>SEO:</strong> Los motores de búsqueda entienden mejor la estructura.
+                            [cite: 253]</li>
+                        [cite_start]<li><strong>Mantenibilidad:</strong> El código es más fácil de leer y mantener.
+                            [cite: 255]</li>
+                    </ul>
+                </details>
+            </article>
+        </section>
+
+        <!-- Sección sobre tipos de elementos HTML -->
+        <section id="blog">
+            <h2>Tipos de Elementos</h2>
+
+            <h3>Elementos de Bloque</h3>
+            <p>Este es un párrafo, que es un elemento de bloque. Ocupa todo el ancho.</p>
+            <div>Esta es una división (div), otro elemento de bloque.</div>
+
+            <h3>Elementos en Línea</h3>
+            <p>
+                Dentro de este párrafo, tenemos un <a href="#">enlace</a>,
+                texto con <strong>énfasis fuerte</strong> y un <em>texto enfatizado</em>.
+                <span>Este es un contenedor genérico en línea.</span> Todos fluyen dentro del texto.
+            </p>
+        </section>
+
+        <!-- Aside con artículos relacionados -->
+        <aside id="info">
+            <h3>Artículos Relacionados</h3>
+            <ul>
+                <li><a href="#">Introducción a CSS</a></li>
+                <li><a href="#">Fundamentos de JavaScript</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>
+            <a href="#privacidad">Política de Privacidad</a> |
+            <a href="#terminos">Términos de Servicio</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
