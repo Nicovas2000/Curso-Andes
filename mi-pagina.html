@@ -114,6 +114,116 @@
             </ul>
         </aside>
 
+        <br>
+
+        <section id="menu">
+
+            <table border="1">
+                <caption>Menú de cafeteria</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th id="Bebidas calientes">Bebidas calientes</th>
+                        <th id="Bebidas frias">Bebidas frías</th>
+                        <th id="Bebidas Postres">Postres</th>
+                        <th id="Bebidas Snacks">Snacks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Producto</th>
+                        <td headers="Bebidas calientes">Café Espresso</td>
+                        <td headers="Bebidas frias">Limonada</td>
+                        <td headers="Bebidas Postres">Tarta de Queso</td>
+                        <td headers="Bebidas Snacks">Sandwich Mixto</td>
+                    </tr>
+                    <tr>
+                        <th>Descripción</th>
+                        <td headers="Bebidas calientes">Café intenso y aromático</td>
+                        <td headers="Bebidas frias">Refrescante con jugo de limón natural</td>
+                        <td headers="Bebidas Postres">Porción individual con salsa de frutos rojos</td>
+                        <td headers="Bebidas Snacks">Pan de molde con jamón y queso</td>
+                    </tr>
+                    <tr>
+                        <th>Precio</th>
+                        <td headers="Bebidas calientes">$2.00</td>
+                        <td headers="Bebidas frias">$1.50</td>
+                        <td headers="Bebidas Postres">$3.00</td>
+                        <td headers="Bebidas Snacks">$2.50</td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <br>
+
+        <section id="contactanos">
+
+            <form action="/procesar-datos" method="post" enctype="multipart/form-data" autocomplete="on">
+                <!-- Aquí se añadirían los elementos de control del formulario, como inputs, textareas, etc. -->
+                <fieldset>
+                    <legend>Reserva en la Cafetería</legend>
+
+                    <label for="username">Nombre de usuario:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Tu nombre"><br><br>
+
+                    <label for="colorInput">Color favorito para tu taza:</label>
+                    <input type="color" id="colorInput" name="color" value="#ff0000"><br><br>
+
+                    <label for="rangeInput">Cantidad de azúcar (0-100):</label>
+                    <input type="range" id="rangeInput" name="azucar" min="0" max="100" value="50"><br><br>
+
+                    <label for="urlInput">Sitio web de tu cafetería favorita:</label>
+                    <input type="url" id="urlInput" name="cafeteriaWeb" placeholder="https://ejemplo.com"><br><br>
+
+                    <label for="searchInput">Buscar producto en el menú:</label>
+                    <input type="search" id="searchInput" name="producto" placeholder="Ej: Café, Tarta"><br><br>
+
+                    <label for="timeInput">Hora de tu visita:</label>
+                    <input type="time" id="timeInput" name="horaVisita" value="14:30"><br><br>
+
+                    <label for="datetimeLocalInput">Fecha y hora de la reserva:</label>
+                    <input type="datetime-local" id="datetimeLocalInput" name="fechaReserva"><br><br>
+
+                    <label for="weekInput">Semana preferida para visitar:</label>
+                    <input type="week" id="weekInput" name="semanaVisita"><br>
+
+                    <br>
+                    <label for="emailInput">Correo electrónico:</label>
+                    <input type="email" id="emailInput" name="email" placeholder="ejemplo@correo.com" required><br><br>
+
+                    <label for="telInput">Teléfono:</label>
+                    <input type="tel" id="telInput" name="telefono" placeholder="+34 600 123 456"><br><br>
+
+                    <label for="selectProducto">Selecciona un producto del menú:</label>
+                    <select id="selectProducto" name="productoMenu">
+                        <option value="">-- Elige una opción --</option>
+                        <option value="cafe">Café Espresso</option>
+                        <option value="limonada">Limonada</option>
+                        <option value="tarta">Tarta de Queso</option>
+                        <option value="sandwich">Sandwich Mixto</option>
+                    </select><br><br>
+
+                    <label for="mensajeInput">Mensaje adicional:</label><br>
+                    <textarea id="mensajeInput" name="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje aquí..."></textarea><br><br>
+                </fieldset>
+
+                <label>
+                    <input type="checkbox" name="terminos" required>
+                    Acepto los <a href="#terminos">Términos y Condiciones</a>
+                </label>
+                <br><br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </form>
+
+
+        </section>
+
+
+
     </main>
 
     <!-- Pie de página -->
