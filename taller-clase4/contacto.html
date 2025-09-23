@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Personal</title>
+    <meta name="description"
+        content="Blog personal de Nicolas Vasquez con información sobre mí, mis habilidades y un formulario de contacto.">
+    <meta name="author" content="Nicolas">
+    <meta name="keywords" content="Blog, contacto, proyectos, datos">
+    <meta property="og:title" content="Blog Personal - Nicolas Vasquez">
+    <meta property="og:description"
+        content="Blog personal de Nicolas Vasquez con información sobre mí, mis habilidades y un formulario de contacto.">
+</head>
+
+<body>
+
+    <header>
+        <h1>Nicolás Vásquez</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <hr>
+
+        <section id="contacto">
+            <h2>Formulario de contacto</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                </p>
+                <p>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aquí"></textarea>
+                </p>
+                <p>
+                    <label for="fecha">Fecha de contacto:</label><br>
+                    <input type="date" id="fecha" name="fecha" placeholder="Selecciona una fecha">
+                </p>
+                <p>
+                    <label for="documento">Documento:</label><br>
+                    <input type="file" id="documento" name="documento" placeholder="Adjunta tu documento">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2025 Nicolás Vásquez - Todos los derechos</p>
+    </footer>
+
+</body>
+
+</html>
