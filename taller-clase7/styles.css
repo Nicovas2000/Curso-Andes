@@ -29,7 +29,7 @@ body {
 }
 
 /* ==============================
-   LAYOUT PRINCIPAL (CSS GRID)
+   LAYOUT PRINCIPAL
    ============================== */
 .header {
   background: var(--color-primario);
@@ -99,7 +99,7 @@ body {
 }
 
 /* ==============================
-   CATÁLOGO DE LIBROS (Flexbox)
+   CATÁLOGO DE LIBROS 
    ============================== */
 .catalogo h2 {
   margin-bottom: var(--espaciado);
