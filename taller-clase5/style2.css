@@ -1,0 +1,70 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    /* 250px para sidebar, 1fr para main */
+    grid-template-rows: auto 1fr auto;
+    /* auto para header/footer, 1fr para main/sidebar */
+    gap: 20px;
+    /* Espacio entre las celdas del grid */
+    min-height: 100vh;
+    /* Para que el grid ocupe toda la altura de la ventana */
+
+    /* ... propiedades anteriores ... */
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer"
+
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.header,
+.sidebar,
+.main,
+.footer {
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.header {
+    background-color: #f44444;
+}
+
+/* Rojo */
+.sidebar {
+    background-color: #5E98F1;
+}
+
+/* Azul */
+.main {
+    background-color: #5CC97B;
+}
+
+/* Verde */
+.footer {
+    background-color: #B05EF1;
+}
+
+/* Púrpura 
