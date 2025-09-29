@@ -1,0 +1,191 @@
+/* ==============================
+   VARIABLES DE ESTILO
+   ============================== */
+:root {
+  --color-primario: #b948c4;
+  --color-secundario: #3498db;
+  --color-fondo: #f5f6fa;
+  --color-texto: #2d3436;
+
+  --fuente-base: "Segoe UI", sans-serif;
+  --espaciado: 1rem;
+  --radio-borde: 8px;
+}
+
+/* ==============================
+   RESETEO Y ESTILOS GLOBALES
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-base);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+/* ==============================
+   LAYOUT PRINCIPAL (CSS GRID)
+   ============================== */
+.header {
+  background: var(--color-primario);
+  color: white;
+  padding: var(--espaciado);
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.logo img {
+  width: 50px;       /* tamaño base del logo */
+  height: auto;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--espaciado);
+  padding: var(--espaciado);
+}
+
+/* ==============================
+   FILTROS (ASIDE con Flexbox)
+   ============================== */
+.filtros {
+  background: white;
+  padding: var(--espaciado);
+  border-radius: var(--radio-borde);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filtros h2 {
+  margin-bottom: 0.5rem;
+}
+
+.filtros ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filtros button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: var(--radio-borde);
+  background: var(--color-secundario);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filtros button:hover {
+  background: #1d6fa5;
+}
+
+/* ==============================
+   CATÁLOGO DE LIBROS (Flexbox)
+   ============================== */
+.catalogo h2 {
+  margin-bottom: var(--espaciado);
+}
+
+.libros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: var(--espaciado);
+}
+
+.libro {
+  background: white;
+  padding: var(--espaciado);
+  border-radius: var(--radio-borde);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.libro img {
+  width: 100%;
+  aspect-ratio: 3 / 4;  /* Mantiene proporción tipo libro */
+  object-fit: cover;
+  border-radius: var(--radio-borde);
+}
+
+.libro h3 {
+  font-size: 1.1rem;
+  color: var(--color-primario);
+}
+
+.libro p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.libro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .libros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .libros {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+.footer {
+  text-align: center;
+  padding: var(--espaciado);
+  background: var(--color-primario);
+  color: white;
+  margin-top: var(--espaciado);
+}
+
+/* ==============================
+   RESPONSIVIDAD (Media Queries)
+   ============================== */
+@media (max-width: 768px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .libro {
+    flex: 1 1 calc(50% - var(--espaciado));
+  }
+}
+
+@media (max-width: 480px) {
+  .libro {
+    flex: 1 1 100%;
+  }
+}
