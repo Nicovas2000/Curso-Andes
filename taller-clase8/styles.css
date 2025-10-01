@@ -1,0 +1,153 @@
+/* 1. Botón con efecto de pulso */
+.boton {
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulso 1.5s infinite;
+  display: inline-block;
+  margin: 20px 20px auto;
+  text-align: center;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.boton:hover {
+  background-color: #45a049;
+}
+
+/* 2. Tarjeta que se gire en 3D al hacer hover */
+.tarjeta {
+  width: 100vh;
+  height: 40vh;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s;
+  perspective: 1000px; /* perspectiva para el efecto 3D */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.contenido {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.tarjeta:hover .contenido {
+  transform: rotateY(180deg);
+}
+
+.frontal, .trasera {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.frontal {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.trasera {
+  background-color: #ff7043;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+/* 3. Menú de navegación con animaciones sutiles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+  background-color: #555;
+}
+
+/* 4. Galería de imágenes con efectos al hacer hover */
+.galeria {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  width: 30%;
+  height: 40vh;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
