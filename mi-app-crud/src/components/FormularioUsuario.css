@@ -1,0 +1,79 @@
+/* Estilos generales para el formulario */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+/* Estilo para los labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Estilos para los inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+  margin-top: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1890ff;
+  background-color: #fff;
+}
+
+/* Botón de submit */
+button[type="submit"] {
+  background-color: #1890ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #40a9ff;
+}
+
+/* Botón de volver (link) */
+a {
+  color: #1890ff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

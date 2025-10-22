@@ -1,0 +1,121 @@
+/* Estilos generales */
+.lista-usuarios {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lista-usuarios a {
+  display: inline; /* o inline-block */
+  margin-top: 0;
+  text-align: left;
+  color: inherit; /* hereda el color del botón */
+  text-decoration: none;
+}
+
+.lista-usuarios h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lista-usuarios .crear-usuario {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.lista-usuarios .crear-usuario:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de la lista */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.usuario-card {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usuario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Información del usuario */
+.user-info {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.nombre {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.correo {
+  font-size: 1rem;
+  color: #555;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions a {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+button.editar, button.eliminar {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+button.editar {
+  background-color: #28a745;
+}
+
+button.editar:hover {
+  background-color: #218838;
+}
+
+button.eliminar {
+  background-color: #dc3545;
+}
+
+button.eliminar:hover {
+  background-color: #c82333;
+}
