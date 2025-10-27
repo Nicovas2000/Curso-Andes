@@ -1,0 +1,551 @@
+* --- Reseteo Básico y Variables --- */
+:root {
+--primary-color: #007bff;
+--primary-hover: #0056b3;
+--danger-color: #dc3545;
+--danger-hover: #a71d2a;
+--secondary-color: #6c757d;
+--secondary-hover: #545b62;
+--bg-color: #f8f9fa;
+--sidebar-bg: #ffffff;
+--border-color: #dee2e6;
+--text-color: #212529;
+--shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'Inter', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+}
+a {
+text-decoration: none;
+color: var(--primary-color);
+}
+/* --- 1. Layout Principal --- */
+.app-layout {
+display: flex;
+min-height: 100vh;
+}
+.sidebar {
+width: 240px;
+background-color: var(--sidebar-bg);
+border-right: 1px solid var(--border-color);
+padding: 1.5rem;
+box-shadow: var(--shadow);
+flex-shrink: 0;
+}
+.sidebar-header {
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 2rem;
+color: var(--primary-color);
+}
+.sidebar-nav ul {
+list-style: none;
+}
+.sidebar-nav li {
+margin-bottom: 1rem;
+}
+.nav-link {
+font-size: 1.1rem;
+color: var(--secondary-color);
+display: block;
+padding: 0.5rem;
+border-radius: 5px;
+transition: background-color 0.2s, color 0.2s;
+}
+.nav-link:hover {
+background-color: #f1f1f1;
+}
+/* React Router pasará esta clase automáticamente a NavLink */
+.nav-link.active {
+background-color: var(--primary-color);
+color: #ffffff;
+}
+.main-content {
+flex-grow: 1;
+padding: 2rem;
+overflow-y: auto;
+}
+/* --- 2. Encabezados de Página --- */
+.page-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 2rem;
+}
+.page-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+  width: 100%;
+}
+/* --- 3. Botones --- */
+.btn {
+padding: 0.75rem 1.25rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1rem;
+font-weight: 500;
+transition: background-color 0.2s;
+}
+.btn-primary {
+background-color: var(--primary-color);
+color: #fff;
+}
+.btn-primary:hover {
+background-color: var(--primary-hover);
+}
+.btn-danger {
+background-color: var(--danger-color);
+color: #fff;
+}
+.btn-danger:hover {
+background-color: var(--danger-hover);
+}
+.btn-secondary {
+background-color: var(--secondary-color);
+color: #fff;
+}
+.btn-secondary:hover {
+background-color: var(--secondary-hover);
+}
+.btn:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+/* --- 4. Tabla de Productos --- */
+.product-table-wrapper {
+background-color: #fff;
+border: 1px solid var(--border-color);
+border-radius: 8px;
+box-shadow: var(--shadow);
+overflow-x: auto; /* Para responsive */
+padding: 16px;
+}
+.product-table {
+width: 100%;
+border-collapse: collapse;
+}
+.product-table th,
+.product-table td {
+padding: 1rem;
+text-align: left;
+border-bottom: 1px solid var(--border-color);
+vertical-align: middle;
+}
+.product-table th {
+font-weight: 600;
+background-color: #f9f9f9;
+}
+.product-table tr:last-child td {
+border-bottom: none;
+}
+.product-table tr:hover {
+background-color: #f1f1f1;
+}
+.product-thumbnail {
+width: 60px;
+height: 60px;
+object-fit: cover;
+border-radius: 5px;
+}
+.product-actions {
+display: flex;
+gap: 0.5rem;
+}
+/* Estilo para Link que parece botón */
+.btn-link {
+display: inline-block;
+padding: 0.4rem 0.8rem;
+font-size: 0.9rem;
+text-align: center;
+border-radius: 5px;
+text-decoration: none;
+}
+/* Clases para los botones de acción */
+.btn-edit {
+background-color: var(--secondary-color);
+color: #fff;
+}
+.btn-edit:hover {
+background-color: var(--secondary-hover);
+}
+.btn-delete {
+padding: 0.4rem 0.8rem;
+font-size: 0.9rem;
+background-color: var(--danger-color);
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.btn-delete:hover {
+background-color: var(--danger-hover);
+}
+/* --- 5. Formularios --- */
+.form-container {
+max-width: 1200px;
+background-color: #fff;
+padding: 2rem;
+border: 1px solid var(--border-color);
+border-radius: 8px;
+box-shadow: var(--shadow);
+}
+.form-group {
+margin-bottom: 1.5rem;
+}
+.form-group label {
+display: block;
+font-weight: 500;
+margin-bottom: 0.5rem;
+}
+.form-control {
+width: 100%;
+padding: 0.75rem;
+font-size: 1rem;
+border: 1px solid var(--border-color);
+border-radius: 5px;
+}
+.form-control:focus {
+outline: none;
+border-color: var(--primary-color);
+box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+textarea.form-control {
+min-height: 120px;
+resize: vertical;
+}
+/* --- 6. Loader y Mensajes --- */
+.loader-container,
+.error-container {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 4rem;
+font-size: 1.25rem;
+}
+.error-message {
+color: var(--danger-color);
+font-weight: 500;
+background-color: #fdd;
+border: 1px solid var(--danger-color);
+padding: 1rem;
+border-radius: 5px;
+}
+
+
+.card {
+  background:white;
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align:center;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-size:1.2rem;
+  margin-bottom:0.5rem;
+}
+
+
+/* === NUEVA ESTÉTICA === */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* NAVBAR SUPERIOR */
+.topbar {
+  background: #ffe600;
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.top-links a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.top-links a:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+
+/* CONTENIDO + SIDEBAR */
+.body-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* SIDEBAR IZQUIERDA */
+.sidebar {
+  background: #fff;
+  width: 240px;
+  border-right: 1px solid #ddd;
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: calc(100vh - 60px);
+  position: sticky;
+  top: 60px;
+}
+
+
+.sidebar a {
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar a:hover {
+  background: #eef5ff;
+  color: #007bff;
+}
+
+.sidebar a.active {
+  background: #007bff;
+  color: #fff;
+}
+
+
+/* CONTENIDO */
+.main-content {
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  flex: 1;
+  background: #fafafa;
+}
+
+/* === LAYOUT GENERAL === */
+.layout-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 60px;
+  background: #ffe600;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+  background: #f4f5f7;
+  width: 100vw;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #333;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: #eef6ff;
+  color: #0469ff;
+}
+
+.sidebar a.active {
+  background: #0469ff;
+  color: #fff;
+}
+
+/* CONTENT AREA */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.page-wrapper {
+  width: 100%;
+}
+
+.table-wrapper {
+  width: 100%;
+}
+
+/* === BOTONES DE ACCIONES === */
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit {
+  background: #e7f0ff;
+  color: #0066ff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #cce0ff;
+  transition: 0.2s;
+}
+
+.btn-edit:hover {
+  background: #d3e4ff;
+}
+
+.btn-delete {
+  background: #ffe7e7;
+  color: #ff1414;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn-delete:hover {
+  background: #ffd0d0;
+}
+
+.filters-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.filters-row .form-control {
+  height: 44px;
+  border-radius: 8px;
+}
+
+/* ✅ Inputs y Textareas Modernos */
+.form-control,
+textarea.form-control,
+input.form-control,
+select.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc; /* gris */
+  font-size: 1rem;
+  background: #fff;
+  transition: 0.2s;
+  outline: none;
+}
+
+.form-control:hover,
+textarea.form-control:hover {
+  border-color: #bfbfbf;
+}
+
+.form-control:focus,
+textarea.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.btn-save {
+  background: #007bff;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 16px;
+}
+
+.btn-save:hover {
+  background: #005fcc;
+}
+
+.form-group {
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.btn-save:disabled {
+  background: #b8b8b8;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
